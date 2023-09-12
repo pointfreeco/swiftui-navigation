@@ -1,11 +1,12 @@
 import Foundation
+import Tagged
 
-struct Fact: Identifiable {
+struct Fact: Hashable, Identifiable {
   var description: String
   let number: Int
 
-  var id: AnyHashable {
-    [self.description as AnyHashable, self.number]
+  var id: Int {
+    self.number
   }
 }
 
