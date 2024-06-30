@@ -1,6 +1,6 @@
 #if canImport(SwiftUI)
   import SwiftUI
-  @_spi(RuntimeWarn) import SwiftUINavigationCore
+  import SwiftUINavigationCore
 
   // NB: Deprecated after 1.3.0
 
@@ -353,8 +353,8 @@
     }
   }
 
-  @available(macOS, unavailable)
   @available(iOS 14, tvOS 14, watchOS 8, *)
+  @available(macOS, unavailable)
   extension View {
     @available(
       *, deprecated,
