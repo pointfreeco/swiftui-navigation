@@ -24,6 +24,9 @@ let package = Package(
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/swift-case-paths", from: "1.5.4"),
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "1.3.2"),
+    .package(path: "../swiftui-navigation"),
+    //.package(url: "https://github.com/pointfreeco/swift-navigation", branch: "uikit-navigation-beta"),
+    //.package(url: "https://github.com/pointfreeco/swift-navigation", from: "2.0.0"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.2.2"),
   ],
   targets: [
@@ -32,6 +35,7 @@ let package = Package(
       dependencies: [
         "SwiftUINavigationCore",
         .product(name: "CasePaths", package: "swift-case-paths"),
+        .product(name: "SwiftNavigation", package: "swift-navigation"),
         .product(name: "IssueReporting", package: "xctest-dynamic-overlay"),
       ]
     ),
